@@ -27,6 +27,9 @@ def machine(message, option, plugin=None, intial_position=(0, 0, 0)):
     r1 = intial_position[0]
     r2 = intial_position[1]
     r3 = intial_position[2]
+    if option.lower() == 'e':
+        print(f'{plugin} is your plugin note it')
+        print(f'{intial_position} is your initial position note it')
     plugin = plugboard(plugin)
     cipher_text = ''
     for i in message.upper().replace(' ', ''):
@@ -75,6 +78,6 @@ if __name__ == '__main__':
     # e for encryption and d for decryption as second argument
     # plugboard input as shown (make sure you don't repeat a single alphabet twice) you can use lower case but format must be same
     # a tuple of initial position as third argument
-    print(machine('your message here', 'e', 'A:R F:W S:Q C:P', (5, 12, 0)))
-    print(machine('ZBMCPQIFQTMGHTD', 'd', 'A:R F:W S:Q C:P', (5, 12, 0)))
+    print(machine('your message here', 'e', 'A:R F:W S:Q C:P', (2, 4, 12)))
+    print(machine('TNCFJFYZJFFBBDY', 'd', 'A:R F:W S:Q C:P', (2, 4, 12)))
 
