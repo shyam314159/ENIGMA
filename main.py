@@ -4,8 +4,8 @@ from rotors import *
 def rotor_generator(initial_position=(0, 0, 0)):
     # generates rotors according to the positions
     a = Rotor1[initial_position[0]:] + Rotor1[:initial_position[0]]
-    b = Rotor1[initial_position[1]:] + Rotor1[:initial_position[1]]
-    c = Rotor1[initial_position[2]:] + Rotor1[:initial_position[2]]
+    b = Rotor2[initial_position[1]:] + Rotor2[:initial_position[1]]
+    c = Rotor3[initial_position[2]:] + Rotor3[:initial_position[2]]
     rotor1 = dict([(list(alphabets)[i], a[i]) for i in range(26)])
     rotor2 = dict([(list(alphabets)[i], b[i]) for i in range(26)])
     rotor3 = dict([(list(alphabets)[i], c[i]) for i in range(26)])
